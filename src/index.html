@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="./output.css" rel="stylesheet">
     <title>Tailwind CSS</title>
 </head>
-<body >
+<body class="scroll-smooth">
+  <div class="xl:container flex flex-col">
     <button class="bg-sky-700 dark:md:hover:bg-fuchsia-600 px-5 py-2 text-sm  rounded-full font-semibold text-white" fdprocessedid="dp1nkh">
         Save changes
     </button>
@@ -16,7 +17,7 @@
             <input type="text" value="tbone" class="mt-1 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500"/>
             <a href="#" class="group block max-w-xs mx-auto rounded-lg p-6 bg-white ring-1 ring-slate-900/5 shadow-lg space-y-3 hover:bg-sky-500 hover:ring-sky-500">
                 <div class="flex items-center space-x-3">
-                    <svg class="h-6 w-6 stroke-sky-500 group-hover:stroke-white" fill="none" viewBox="0 0 24 24"></svg>
+                    <svg class="h-6 w-6 fill-zinc-500 stroke-sky-500 group-hover:stroke-white" fill="none" viewBox="0 0 24 24"></svg>
                     <h3 class="text-slate-900 group-hover:text-white text-sm font-semibold">New project</h3>
                 </div>
                 <p class="text-slate-500 group-hover:text-white text-sm">Create a new project from a variety of starting templates.</p>
@@ -192,7 +193,7 @@
         <div class="bg-stone-500">02</div>
         <div class="bg-stone-500">03</div>
       </div>
-      <div class="grid bg-neutral-500 grid-cols-2 gap-4 place-content-center h-48">
+      <div class="grid bg-neutral-500 grid-cols-2 divide-x-4 gap-4 place-content-center h-48">
         <div class="bg-slate-500 w-fit place-self-end">01</div>
         <div class="bg-slate-500 w-fit place-self-start">02</div>
         <div class="bg-slate-500 w-fit place-self-end">03</div>
@@ -285,7 +286,7 @@
         <span class="bg-purple-500 m-2 h-10 align-text-top">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est, odit?</span>
         <span class="bg-purple-500 m-2 h-10 align-text-bottom">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est, odit?</span>
         <span class="bg-purple-500 m-2 h-10 align-sub">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est, odit?</span>
-        <span class="bg-purple-500 m-2 h-10 align-super whitespace-nowrap">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est, odit?Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum, perferendis? Ullam, cumque dolore ex et expedita porro assumenda vitae, dolores totam velit sequi maxime veritatis quae officia repudiandae similique possimus ad ipsam autem non temporibus eaque consectetur culpa? Cumque asperiores hic voluptatibus aspernatur quam odio delectus optio sit aliquam nulla!</span>
+        <span class="bg-purple-500 m-2 h-10 align-super whitespace-nowrap drop-shadow-lg">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est, odit?Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum, perferendis? Ullam, cumque dolore ex et expedita porro assumenda vitae, dolores totam velit sequi maxime veritatis quae officia repudiandae similique possimus ad ipsam autem non temporibus eaque consectetur culpa? Cumque asperiores hic voluptatibus aspernatur quam odio delectus optio sit aliquam nulla!</span>
       </article>
       <p class="whitespace-pre-line">lorem       Lorem, ipsum.   
         Lorem, ipsum dolor.    Lorem ipsum dolor sit.
@@ -294,9 +295,71 @@
       <div class="bg-scroll bg-contain bg-clip-padding border-8  border-fuchsia-500 p-5 bg-left-bottom" style="background: url(images/home-img-4.jpg);">
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo laudantium dolore, corrupti unde impedit, dolor velit quod corporis optio excepturi voluptatem laborum libero rem temporibus ratione necessitatibus molestias reiciendis illum laboriosam? Autem facilis, animi, ducimus, possimus distinctio nesciunt quis architecto debitis fuga voluptate iste quos. Quod dolore ea dolor in iusto, optio culpa error. Eius blanditiis aliquid vel voluptate et excepturi earum quibusdam fuga debitis illum non architecto doloribus delectus, aspernatur inventore atque. Optio laboriosam architecto nam quisquam obcaecati sunt eum? Nesciunt itaque laboriosam nam porro, laudantium eligendi. Porro qui fugit ducimus itaque laborum dignissimos eligendi nesciunt voluptate minus perspiciatis?
       </div>
-      <div class="bg-gradient-to-r from-fuchsia-500 via-blue-500 to-neutral-500" style="height:200px;width: 200px;">
+      <div class="bg-gradient-to-r from-fuchsia-500 via-blue-500 rounded-full to-neutral-500 shadow-xl opacity-50" style="height:200px;width: 200px;">
         <h1>Dinesh</h1>
         <p>Linear Gradient</p>
       </div>
+      <div class="flex justify-center -space-x-14 backdrop-blur-lg bg-black/50">
+        <div class="mix-blend-multiply bg-blue-400 h-80 w-80 rounded-full"></div>
+        <div class="mix-blend-multiply bg-pink-400 h-80 w-80 rounded-full"></div>
+      </div>
+      <table style="border: 2px black solid;" class="border-spacing-2 rotate-45 translate-x-10 skew-x-12">
+        <caption class="caption-top">
+          Table 3.1: Professional wrestlers and their signature moves.
+        </caption>
+        <thead>
+          <tr>
+            <th style="border: 2px black solid;">State</th>
+            <th style="border: 2px black solid;">City</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="border: 2px black solid;">Indiana</td>
+            <td style="border: 2px black solid;">Indianapolis</td>
+          </tr>
+          <tr>
+            <td style="border: 2px black solid;">Ohio</td>
+            <td style="border: 2px black solid;">Columbus</td>
+          </tr>
+          <tr>
+            <td style="border: 2px black solid;">Michigan</td>
+            <td style="border: 2px black solid;">Detroit</td>
+          </tr>
+        </tbody>
+      </table>
+      <button class="transition duration-100 ease-in-out  bg-blue-500 hover:-translate-y-1 hover:scale-110 mb-80 hover:bg-indigo-500">
+        Save Changes
+      </button>
+      <button type="button" class="bg-indigo-500" disabled>
+        <svg class="animate-spin h-5 w-5 mr-3" viewBox="0 0 24 24">
+        </svg>
+        Processing...
+      </button>
+      <span class="relative flex h-3 w-3">
+        <span class="animate-pulse absolute inline-flex h-full w-full rounded-full bg-sky-400 opacity-75"></span>
+        <span class="relative inline-flex rounded-full h-3 w-3 bg-sky-500"></span>
+      </span>
+      <div class="overflow-auto will-change-scroll">
+      <div class="snap-x flex">
+        <div class="-scroll-ms-10 snap-center ">
+          <img src="https://images.unsplash.com/photo-1604999565976-8913ad2ddb7c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&h=160&q=80" />
+        </div>
+        <div class="scroll-ml-6 snap-center">
+          <img src="https://images.unsplash.com/photo-1540206351-d6465b3ac5c1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&h=160&q=80" />
+        </div>
+        <div class="scroll-ml-6 snap-center">
+          <img src="https://images.unsplash.com/photo-1622890806166-111d7f6c7c97?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&h=160&q=80" />
+        </div>
+        <div class="scroll-ml-6 snap-center">
+          <img src="https://images.unsplash.com/photo-1590523277543-a94d2e4eb00b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&h=160&q=80" />
+        </div>
+        <div class="scroll-ml-6 snap-center">
+          <img src="https://images.unsplash.com/photo-1575424909138-46b05e5919ec?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&h=160&q=80" />
+        </div>
+      </div>
+      </div>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="stroke-2 stroke-lime-500 fill-violet-500"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M464 160c8.8 0 16 7.2 16 16V336c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V176c0-8.8 7.2-16 16-16H464zM80 96C35.8 96 0 131.8 0 176V336c0 44.2 35.8 80 80 80H464c44.2 0 80-35.8 80-80V320c17.7 0 32-14.3 32-32V224c0-17.7-14.3-32-32-32V176c0-44.2-35.8-80-80-80H80zm272 96H96V320H352V192z"/></svg>
+  </div>
 </body>
 </html>
